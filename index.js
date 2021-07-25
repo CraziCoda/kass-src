@@ -3,7 +3,6 @@ const express = require("express");
 const hbs = require("express-handlebars");
 const logger = require("morgan");
 const favicon = require("serve-favicon");
-const bodyParser = require("body-parser");
 
 //importing routes
 const routes = require("./routes/route");
