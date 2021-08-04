@@ -2,7 +2,7 @@ const path = require("path");
 const express = require("express");
 const hbs = require("express-handlebars");
 const logger = require("morgan");
-const favicon = require("serve-favicon");
+//const favicon = require("serve-favicon");
 
 //importing routes
 const routes = require("./routes/route");
@@ -22,7 +22,7 @@ app.engine(
 );
 app.set("views", path.join(__dirname, "views"));
 app.set("view engine", "hbs");
-
+app.use(express.static("views"));
 //adding middlewares
 app.use(logger("dev"));
 
