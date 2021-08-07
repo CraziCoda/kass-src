@@ -28,13 +28,13 @@ app.use(express.static("views"));
 
 //adding middlewares
 app.use(logger("dev"));
-app.use(
+/* app.use(
   session({
     secret: "kass-src-well",
     resave: false,
     saveUninitialized: true
   })
-);
+); */
 app.use(express.json());
 app.use(express.urlencoded({extended: false}));
 app.use(favicon(path.join(__dirname, 'assets/images/favicon_io', 'favicon.ico')))
