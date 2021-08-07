@@ -12,6 +12,7 @@ function rotate(event) {
         navigation.style.transform = 'translateX(-40%)';
         navigation.style.transition = '300ms linear';
         blur.style.opacity = '1';
+        blur.addEventListener('click', backagain);
         boolean = true;
     } else {
         button.classList.remove('active');
@@ -20,4 +21,11 @@ function rotate(event) {
         blur.style.opacity = '0';
         boolean = false;
     }
+}
+
+function backagain(event){
+    button.classList.remove('active');
+    navigation.style.transform = 'translateX(-100%)';
+    boolean = false;
+    blur.style.opacity = '0';
 }

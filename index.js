@@ -2,7 +2,9 @@ const path = require("path");
 const express = require("express");
 const hbs = require("express-handlebars");
 const logger = require("morgan");
-//const favicon = require("serve-favicon");
+const session = require("express-session");
+const mongoose = require('mongoose');
+const favicon = require("serve-favicon");
 
 //importing routes
 const routes = require("./routes/route");
@@ -23,8 +25,19 @@ app.engine(
 app.set("views", path.join(__dirname, "views"));
 app.set("view engine", "hbs");
 app.use(express.static("views"));
+
 //adding middlewares
 app.use(logger("dev"));
+app.use(
+  session({
+    secret: "kass-src-well",
+    resave: false,
+    saveUninitialized: true
+  })
+);
+app.use(express.json());
+app.use(express.urlencoded({extended: false}));
+app.use(favicon(path.join(__dirname, 'assets/images/favicon_io', 'favicon.ico')))
 
 //using imported routes
 app.use("/", routes);
