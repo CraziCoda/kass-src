@@ -1,0 +1,78 @@
+/* Pleae don't touch must be constant */
+
+*::before, *::after, *, body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* For the header section */
+
+header {
+    height: 50px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+/* For the header logo */
+
+header .logo {
+    z-index: 3;
+    font-size: 25px;
+}
+
+header .button {
+    padding-top: 10px;
+}
+
+/* the menu bar button */
+
+header .button i {
+    font-size: 20px;
+}
+
+/* navigation */
+
+.navigation {
+    position: fixed;
+    top: 0;
+    left: 0; 
+    height: 100vh;
+    background: red;
+    z-index: 2;
+    opacity: 0;
+}
+
+.navigation .list {
+    list-style: none;
+    margin-top: 40px;
+    padding: 0; 
+    width: 200px;
+}
+.navigation .list .list-item{
+    margin: 0;
+    padding: 0;
+}
+
+.navigation .list .list-item .nav-link {
+    color: white;
+}
+
+hr{
+    margin: 0;
+    color: #ffffff;
+}
+
+/* Footer */
+
+footer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px;
+    text-align: center;
+    /* background: red; */
+}
