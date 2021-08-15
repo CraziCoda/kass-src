@@ -51,19 +51,20 @@ function showMenu(){
 
 function call( event ){
     if(menuIsActive){
-        button.innerHTML = '<i class="fa fa-close"></i>'
         menu.style.transition = '300ms linear';
         menu.style.transform = 'translateX(0)';
+        button.classList.add('active');
         main.addEventListener('click', event => {
-            button.innerHTML = '<i class="fa fa-bars"></i>'
             menu.style.transition = '300ms linear';
             menu.style.transform = 'translateX(-100%)';
+            menuIsActive = false;
+            bars.classList.remove('active');
         })
         
     }else{
-        button.innerHTML = '<i class="fa fa-bars"></i>'
         menu.style.transition = '300ms linear';
         menu.style.transform = 'translateX(-100%)';
+        button.classList.remove('active');
     }
 }
 

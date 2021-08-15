@@ -46,16 +46,74 @@ header .logo {
 }
 
 header .button {
-    padding-top: 10px;
+    margin-top: 10px;
     cursor: pointer;
     z-index: 6;
     color: var(--first-color);
+    height: 30px;
+    width: 30px;
+    /* border: 2px solid black; */
+    position: relative;
+    transition: transform 300ms linear;
 }
 
 /* the menu bar button */
 
-header .button i {
-    font-size: 20px;
+header .button .bars {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 2px;
+    width: 100%;
+    background: var(--first-color);
+    transition: transform 300ms linear;
+}
+
+header .button .bars::before {
+    content: '';
+    position: absolute;
+    top: 300%;
+    height: 2px;
+    width: 100%;
+    background: var(--first-color);
+    transition: transform 300ms linear;
+}
+
+header .active {
+    transform: rotate(405deg);
+    transition: transform 300ms linear;
+}
+
+header .active .bars {
+    background: transparent;
+    transition: transform 300ms linear;
+}
+
+header .active .bars::before {
+    content: '';
+    position: absolute;
+    left: -1px;
+    transform: rotate(90deg) translate(-50%, -50%);
+    transition: transform 300ms linear;
+}
+
+header .active .bars::after {
+    content: '';
+    position: absolute;
+    top: -10px;
+    transform: rotate(-45deg) translateX(-50%, -50%);
+    transition: transform 300ms linear;
+}
+
+header .button .bars::after {
+    content: '';
+    position: absolute;
+    top: -300%;
+    height: 2px;
+    width: 100%;
+    background: var(--first-color);
+    transition: transform 300ms linear;
 }
 
 /* navigation */
