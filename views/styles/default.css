@@ -62,6 +62,7 @@ header .button i {
     height: 100vh;
     background: var(--fifth-color);
     z-index: 2;
+    width: 50vw;
     transform: translateX(-100%);
     /* opacity: 0; */
 }
