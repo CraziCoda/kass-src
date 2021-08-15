@@ -57,8 +57,8 @@ function call( event ){
         main.addEventListener('click', event => {
             menu.style.transition = '300ms linear';
             menu.style.transform = 'translateX(-100%)';
-            menuIsActive = false;
             bars.classList.remove('active');
+            menuIsActive = false;
         })
         
     }else{
