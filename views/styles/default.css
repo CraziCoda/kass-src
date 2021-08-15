@@ -62,7 +62,7 @@ header .button i {
     height: 100vh;
     background: var(--fifth-color);
     z-index: 2;
-    width: 50vw;
+    width: 70vw;
     transform: translateX(-100%);
     /* opacity: 0; */
 }
@@ -74,7 +74,7 @@ header .button i {
     width: 200px;
 }
 .navigation .list .list-item{
-    margin-left: 30px;
+    margin-left: 10px;
     padding: 0;
 }
 
