@@ -33,6 +33,7 @@ function backagain(event){
 
 const menu = document.querySelector('.navigation');
 const button = document.querySelector('.button');
+const main = document.querySelector('.main')
 
 button.addEventListener('click', showMenu);
 
@@ -48,14 +49,21 @@ function showMenu(){
     call();
 }
 
-function call(){
+function call( event ){
     if(menuIsActive){
+        button.innerHTML = '<i class="fa fa-close"></i>'
         menu.style.transition = '300ms linear';
-        menu.style.opacity = "1";
+        menu.style.transform = 'translateX(0)';
+        main.addEventListener('click', event => {
+            button.innerHTML = '<i class="fa fa-bars"></i>'
+            menu.style.transition = '300ms linear';
+            menu.style.transform = 'translateX(-100%)';
+        })
         
     }else{
+        button.innerHTML = '<i class="fa fa-bars"></i>'
         menu.style.transition = '300ms linear';
-        menu.style.opacity = "0";
+        menu.style.transform = 'translateX(-100%)';
     }
 }
 
