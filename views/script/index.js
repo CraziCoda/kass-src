@@ -64,6 +64,7 @@ function call( event ){
     }else{
         menu.style.transition = '300ms linear';
         menu.style.transform = 'translateX(-100%)';
+        bars.classList.remove('active');
         button.classList.remove('active');
     }
 }
