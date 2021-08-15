@@ -47,6 +47,7 @@ header .logo {
 header .button {
     padding-top: 10px;
     cursor: pointer;
+    z-index: 6;
 }
 
 /* the menu bar button */
